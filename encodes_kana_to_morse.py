@@ -27,7 +27,7 @@ KANA_CHARACTER = re.compile("^[ァ-ヶ]+$")
 if "INPUT.txt" in kana::
     f = open(kana, "r", encoding="UTF-8")
     kana = f.read()
-    #f.close()
+    f.close()
 
 try:
     # カナ文字判定
