@@ -24,10 +24,10 @@ kana = input(PG_NAME + EXPLANATION)
 KANA_CHARACTER = re.compile("^[ァ-ヶ]+$")
 
 # ファイルをインプットとして利用する場合
-if "INPUT.txt" in kana:
+if "INPUT.txt" in kana::
     f = open(kana, "r", encoding="UTF-8")
     kana = f.read()
-    f.close()
+    #f.close()
 
 try:
     # カナ文字判定
@@ -61,7 +61,7 @@ try:
         print(encoded_strings)
         print(f"TOTAL TIME: {TOTAL_TIME}")
     else:
-        print(ALARM_MSG)    
+        print(ALAR_MSG)    
 except:
     print(ERR_MSG)
 
