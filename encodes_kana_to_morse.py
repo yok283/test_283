@@ -20,11 +20,11 @@ ALARM_MSG = "カタカナ以外の文字を含めないで下さい。\
     \r\nスペースや記号も含めないでください。"
 ERR_MSG = "濁音や長音などを抜いて入力して下さい。"
 
-kana = input(PG_NAME + EXPLANATION)
-KANA_CHARACTER = re.compile("^[ァ-ヶ]+$")
+#kana = input(PG_NAME + EXPLANATION)
+#KANA_CHARACTER = re.compile("^[ァ-ヶ]+$")
 
 # ファイルをインプットとして利用する場合
-if "INPUT.txt" in kana::
+if "INPUT.txt" in kana:
     f = open(kana, "r", encoding="UTF-8")
     kana = f.read()
     f.close()
@@ -61,7 +61,7 @@ try:
         print(encoded_strings)
         print(f"TOTAL TIME: {TOTAL_TIME}")
     else:
-        print(ALAR_MSG)    
+        print(ALARM_MSG)    
 except:
     print(ERR_MSG)
 
